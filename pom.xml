@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>cn.ncufz</groupId>
+  <artifactId>fywebprotal</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <packaging>war</packaging>
+
+  <name>webprotal</name>
+  <url>http://www.ncufz.cn</url>
+
+  <properties>
+    <!--统一版本号管理-->
+    <java.version>1.8</java.version>
+    <version>1.0.0</version>
+
+    <!--字符集-->
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    <project.build.locale>zh_CN</project.build.locale>
+
+    <!--spring-->
+    <spring.version>4.3.18.RELEASE</spring.version>
+
+    <!--aspectj(AOP)-->
+    <aspectj.version>1.9.1</aspectj.version>
+
+    <!--db-->
+    <mybatis.version>3.4.6</mybatis.version>
+    <druid.version>1.1.10</druid.version>
+    <mybatis.spring.version>1.3.2</mybatis.spring.version>
+    <sqlserver.version>4.2</sqlserver.version>
+
+    <!--jackson-->
+    <jackson.version>2.9.6</jackson.version>
+
+    <!--servlet-->
+    <servlet.version>3.1.0</servlet.version>
+    <jsp.version>2.2</jsp.version>
+
+    <!--日志（slf4j+logback）-->
+    <slf4j.version>1.7.24</slf4j.version>
+    <logback.version>1.2.3</logback.version>
+    <logback.ext.spring.version>0.1.5</logback.ext.spring.version>
+    <jcl.over.slf4j.version>1.7.25</jcl.over.slf4j.version>
+
+
+    <commons.lang3.version>3.7</commons.lang3.version>
+    <commons.io.version>2.6</commons.io.version>
+    <commons.codec.version>1.11</commons.codec.version>
+
+    <commons.fileupload.version>1.3.1</commons.fileupload.version>
+    <commons.beanutils.version>1.9.3</commons.beanutils.version>
+
+    <fastjson.version>1.2.49</fastjson.version>
+    <gson.version>2.8.2</gson.version>
+
+    <jstl.version>1.2</jstl.version>
+
+    <!--maven plugin 版本号定义-->
+    <maven.compiler.plugin.version>3.7.0</maven.compiler.plugin.version>
+    <maven.tomcat7.plugin.version>2.2</maven.tomcat7.plugin.version>
+  </properties>
+
+  <dependencies>
+    <!-- spring包 core、web、oxm、tx、jdbc、webmvc、aop、context -->
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-aop</artifactId>
+      <version>${spring.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-beans</artifactId>
+      <version>${spring.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-jdbc</artifactId>
+      <version>${spring.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-core</artifactId>
+      <version>${spring.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-webmvc</artifactId>
+      <version>${spring.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-web</artifactId>
+      <version>${spring.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-tx</artifactId>
+      <version>${spring.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-context</artifactId>
+      <version>${spring.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-context-support</artifactId>
+      <version>${spring.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-test</artifactId>
+      <version>${spring.version}</version>
+    </dependency>
+
+    <!--AOP-->
+    <dependency>
+      <groupId>org.aspectj</groupId>
+      <artifactId>aspectjrt</artifactId>
+      <version>${aspectj.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.aspectj</groupId>
+      <artifactId>aspectjweaver</artifactId>
+      <version>${aspectj.version}</version>
+    </dependency>
+    <!-- db -->
+    <dependency>
+      <groupId>org.mybatis</groupId>
+      <artifactId>mybatis</artifactId>
+      <version>${mybatis.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.mybatis</groupId>
+      <artifactId>mybatis-spring</artifactId>
+      <version>${mybatis.spring.version}</version>
+    </dependency>
+    <!--阿里durid(德鲁伊)数据库连接池-->
+    <dependency>
+      <groupId>com.alibaba</groupId>
+      <artifactId>druid</artifactId>
+      <version>${druid.version}</version>
+    </dependency>
+
+    <!-- 导入sqlserver数据库链接jar包 -->
+    <dependency>
+      <groupId>com.microsoft.sqlserver</groupId>
+      <artifactId>sqljdbc4</artifactId>
+      <version>${sqlserver.version}</version>
+    </dependency>
+
+    <!-- jackson -->
+    <dependency>
+      <groupId>com.fasterxml.jackson.core</groupId>
+      <artifactId>jackson-core</artifactId>
+      <version>${jackson.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.fasterxml.jackson.core</groupId>
+      <artifactId>jackson-databind</artifactId>
+      <version>${jackson.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.fasterxml.jackson.core</groupId>
+      <artifactId>jackson-annotations</artifactId>
+      <version>${jackson.version}</version>
+    </dependency>
+
+    <!--servlet-->
+    <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>javax.servlet-api</artifactId>
+      <version>${servlet.version}</version>
+      <scope>provided</scope>
+    </dependency>
+    <!-- <dependency>
+         <groupId>javax.servlet.jsp</groupId>
+         <artifactId>jsp-api</artifactId>
+         <version>${jsp.version}</version>
+         <scope>provided</scope>
+     </dependency>-->
+
+
+    <!--日志（slf4j+logback）-->
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-api</artifactId>
+      <version>${slf4j.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>ch.qos.logback</groupId>
+      <artifactId>logback-core</artifactId>
+      <version>${logback.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>ch.qos.logback</groupId>
+      <artifactId>logback-access</artifactId>
+      <version>${logback.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>ch.qos.logback</groupId>
+      <artifactId>logback-classic</artifactId>
+      <version>${logback.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>ch.qos.logback</groupId>
+      <artifactId>logback-access</artifactId>
+      <version>${logback.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.logback-extensions</groupId>
+      <artifactId>logback-ext-spring</artifactId>
+      <version>${logback.ext.spring.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>jcl-over-slf4j</artifactId>
+      <version>${jcl.over.slf4j.version}</version>
+    </dependency>
+
+    <!-- Commons utils -->
+    <dependency>
+      <groupId>org.apache.commons</groupId>
+      <artifactId>commons-lang3</artifactId>
+      <version>${commons.lang3.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>commons-io</groupId>
+      <artifactId>commons-io</artifactId>
+      <version>${commons.io.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>commons-codec</groupId>
+      <artifactId>commons-codec</artifactId>
+      <version>${commons.codec.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>commons-fileupload</groupId>
+      <artifactId>commons-fileupload</artifactId>
+      <version>${commons.fileupload.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>commons-beanutils</groupId>
+      <artifactId>commons-beanutils</artifactId>
+      <version>${commons.beanutils.version}</version>
+    </dependency>
+
+    <!-- 格式化对象，方便输出日志 -->
+    <dependency>
+      <groupId>com.alibaba</groupId>
+      <artifactId>fastjson</artifactId>
+      <version>${fastjson.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.google.code.gson</groupId>
+      <artifactId>gson</artifactId>
+      <version>${gson.version}</version>
+    </dependency>
+    <!-- JSTL标签类 -->
+    <dependency>
+      <groupId>jstl</groupId>
+      <artifactId>jstl</artifactId>
+      <version>${jstl.version}</version>
+    </dependency>
+
+  </dependencies>
+
+
+  <build>
+
+    <resources>
+      <!--声明资源文件路径-->
+      <resource>
+        <directory>src/main/resources</directory>
+        <includes>
+          <include>**/*.properties</include>
+          <include>**/*.xml</include>
+        </includes>
+        <filtering>false</filtering>
+      </resource>
+      <resource>
+        <directory>src/main/java</directory>
+        <includes>
+          <include>**/*.properties</include>
+          <include>**/*.xml</include>
+        </includes>
+        <filtering>false</filtering>
+      </resource>
+    </resources>
+
+
+    <plugins>
+      <!--指定编译环境-->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>${maven.compiler.plugin.version}</version>
+        <configuration>
+          <source>${java.version}</source>
+          <target>${java.version}</target>
+          <detail>true</detail>
+          <encoding>utf-8</encoding>
+        </configuration>
+      </plugin>
+
+      <!--Tomcat 7 插件-->
+      <plugin>
+        <groupId>org.apache.tomcat.maven</groupId>
+        <artifactId>tomcat7-maven-plugin</artifactId>
+        <version>${maven.tomcat7.plugin.version}</version>
+        <configuration>
+          <path>/</path>
+          <port>8080</port>
+          <uriEncoding>UTF-8</uriEncoding>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+</project>

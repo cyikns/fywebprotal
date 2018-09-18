@@ -1,0 +1,1 @@
+2018-09-18 15:44:18.036 WARN  org.springframework.web.servlet.PageNotFound - No mapping found for HTTP request with URI [/favicon.ico] in DispatcherServlet with name 'springMVC'

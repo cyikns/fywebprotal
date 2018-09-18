@@ -1,0 +1,90 @@
+2018-09-18 15:44:04.378 INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization started
+2018-09-18 15:44:04.424 INFO  org.springframework.web.context.support.XmlWebApplicationContext - Refreshing Root WebApplicationContext: startup date [Tue Sep 18 15:44:04 CST 2018]; root of context hierarchy
+2018-09-18 15:44:04.456 INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [applicationContext.xml]
+2018-09-18 15:44:04.814 INFO  org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2018-09-18 15:44:05.563 INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2018-09-18 15:44:06.172 INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1794 ms
+2018-09-18 15:44:06.265 INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'springMVC': initialization started
+2018-09-18 15:44:06.265 INFO  org.springframework.web.context.support.XmlWebApplicationContext - Refreshing WebApplicationContext for namespace 'springMVC-servlet': startup date [Tue Sep 18 15:44:06 CST 2018]; parent: Root WebApplicationContext
+2018-09-18 15:44:06.296 INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [springmvc.xml]
+2018-09-18 15:44:06.421 INFO  org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2018-09-18 15:44:06.562 INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/test2]}" onto public java.lang.String cn.ncufz.webprotal.controller.FirstDemo.findUserById(org.springframework.web.servlet.ModelAndView)
+2018-09-18 15:44:06.562 INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/test1]}" onto public java.lang.String cn.ncufz.webprotal.controller.FirstDemo.testSpring()
+2018-09-18 15:44:06.764 INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: WebApplicationContext for namespace 'springMVC-servlet': startup date [Tue Sep 18 15:44:06 CST 2018]; parent: Root WebApplicationContext
+2018-09-18 15:44:06.811 INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: WebApplicationContext for namespace 'springMVC-servlet': startup date [Tue Sep 18 15:44:06 CST 2018]; parent: Root WebApplicationContext
+2018-09-18 15:44:06.920 INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'springMVC': initialization completed in 655 ms
+2018-09-18 15:47:04.303 INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization started
+2018-09-18 15:47:04.350 INFO  org.springframework.web.context.support.XmlWebApplicationContext - Refreshing Root WebApplicationContext: startup date [Tue Sep 18 15:47:04 CST 2018]; root of context hierarchy
+2018-09-18 15:47:04.381 INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [applicationContext.xml]
+2018-09-18 15:47:04.740 INFO  org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2018-09-18 15:47:05.473 INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2018-09-18 15:47:06.050 INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1747 ms
+2018-09-18 15:47:06.097 INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'springMVC': initialization started
+2018-09-18 15:47:06.097 INFO  org.springframework.web.context.support.XmlWebApplicationContext - Refreshing WebApplicationContext for namespace 'springMVC-servlet': startup date [Tue Sep 18 15:47:06 CST 2018]; parent: Root WebApplicationContext
+2018-09-18 15:47:06.113 INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [springmvc.xml]
+2018-09-18 15:47:06.238 INFO  org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2018-09-18 15:47:06.362 INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/test1]}" onto public java.lang.String cn.ncufz.webprotal.controller.FirstDemo.testSpring()
+2018-09-18 15:47:06.362 INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/test2]}" onto public java.lang.String cn.ncufz.webprotal.controller.FirstDemo.findUserById(org.springframework.web.servlet.ModelAndView)
+2018-09-18 15:47:06.581 INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: WebApplicationContext for namespace 'springMVC-servlet': startup date [Tue Sep 18 15:47:06 CST 2018]; parent: Root WebApplicationContext
+2018-09-18 15:47:06.628 INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: WebApplicationContext for namespace 'springMVC-servlet': startup date [Tue Sep 18 15:47:06 CST 2018]; parent: Root WebApplicationContext
+2018-09-18 15:47:06.737 INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'springMVC': initialization completed in 640 ms
+2018-09-18 15:48:47.640 INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization started
+2018-09-18 15:48:47.687 INFO  org.springframework.web.context.support.XmlWebApplicationContext - Refreshing Root WebApplicationContext: startup date [Tue Sep 18 15:48:47 CST 2018]; root of context hierarchy
+2018-09-18 15:48:47.718 INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [applicationContext.xml]
+2018-09-18 15:48:48.108 INFO  org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2018-09-18 15:48:48.826 INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2018-09-18 15:48:49.372 INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1732 ms
+2018-09-18 15:48:49.434 INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'springMVC': initialization started
+2018-09-18 15:48:49.450 INFO  org.springframework.web.context.support.XmlWebApplicationContext - Refreshing WebApplicationContext for namespace 'springMVC-servlet': startup date [Tue Sep 18 15:48:49 CST 2018]; parent: Root WebApplicationContext
+2018-09-18 15:48:49.481 INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [springmvc.xml]
+2018-09-18 15:48:49.575 INFO  org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2018-09-18 15:48:49.700 INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/test1]}" onto public java.lang.String cn.ncufz.webprotal.controller.FirstDemo.testSpring()
+2018-09-18 15:48:49.700 INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/test2]}" onto public java.lang.String cn.ncufz.webprotal.controller.FirstDemo.findUserById(org.springframework.web.servlet.ModelAndView)
+2018-09-18 15:48:49.887 INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: WebApplicationContext for namespace 'springMVC-servlet': startup date [Tue Sep 18 15:48:49 CST 2018]; parent: Root WebApplicationContext
+2018-09-18 15:48:49.934 INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: WebApplicationContext for namespace 'springMVC-servlet': startup date [Tue Sep 18 15:48:49 CST 2018]; parent: Root WebApplicationContext
+2018-09-18 15:48:50.043 INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'springMVC': initialization completed in 609 ms
+2018-09-18 15:52:10.521 INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization started
+2018-09-18 15:52:10.553 INFO  org.springframework.web.context.support.XmlWebApplicationContext - Refreshing Root WebApplicationContext: startup date [Tue Sep 18 15:52:10 CST 2018]; root of context hierarchy
+2018-09-18 15:52:10.581 INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [applicationContext.xml]
+2018-09-18 15:52:10.852 INFO  org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2018-09-18 15:52:11.608 INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2018-09-18 15:52:12.111 INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1588 ms
+2018-09-18 15:52:12.144 INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'springMVC': initialization started
+2018-09-18 15:52:12.146 INFO  org.springframework.web.context.support.XmlWebApplicationContext - Refreshing WebApplicationContext for namespace 'springMVC-servlet': startup date [Tue Sep 18 15:52:12 CST 2018]; parent: Root WebApplicationContext
+2018-09-18 15:52:12.147 INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [springmvc.xml]
+2018-09-18 15:52:12.232 INFO  org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2018-09-18 15:52:12.345 INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/test2]}" onto public java.lang.Object cn.ncufz.webprotal.controller.FirstDemo.findUserById(org.springframework.web.servlet.ModelAndView)
+2018-09-18 15:52:12.345 INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/test1]}" onto public java.lang.String cn.ncufz.webprotal.controller.FirstDemo.testSpring()
+2018-09-18 15:52:12.539 INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: WebApplicationContext for namespace 'springMVC-servlet': startup date [Tue Sep 18 15:52:12 CST 2018]; parent: Root WebApplicationContext
+2018-09-18 15:52:12.576 INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: WebApplicationContext for namespace 'springMVC-servlet': startup date [Tue Sep 18 15:52:12 CST 2018]; parent: Root WebApplicationContext
+2018-09-18 15:52:12.652 INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'springMVC': initialization completed in 508 ms
+2018-09-18 15:54:26.660 INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization started
+2018-09-18 15:54:26.697 INFO  org.springframework.web.context.support.XmlWebApplicationContext - Refreshing Root WebApplicationContext: startup date [Tue Sep 18 15:54:26 CST 2018]; root of context hierarchy
+2018-09-18 15:54:26.726 INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [applicationContext.xml]
+2018-09-18 15:54:27.003 INFO  org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2018-09-18 15:54:27.725 INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2018-09-18 15:54:28.342 INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1680 ms
+2018-09-18 15:54:28.370 INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'springMVC': initialization started
+2018-09-18 15:54:28.373 INFO  org.springframework.web.context.support.XmlWebApplicationContext - Refreshing WebApplicationContext for namespace 'springMVC-servlet': startup date [Tue Sep 18 15:54:28 CST 2018]; parent: Root WebApplicationContext
+2018-09-18 15:54:28.374 INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [springmvc.xml]
+2018-09-18 15:54:28.453 INFO  org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2018-09-18 15:54:28.573 INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/test2]}" onto public java.lang.Object cn.ncufz.webprotal.controller.FirstDemo.findUserById(org.springframework.ui.Model)
+2018-09-18 15:54:28.574 INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/test1]}" onto public java.lang.String cn.ncufz.webprotal.controller.FirstDemo.testSpring()
+2018-09-18 15:54:28.761 INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: WebApplicationContext for namespace 'springMVC-servlet': startup date [Tue Sep 18 15:54:28 CST 2018]; parent: Root WebApplicationContext
+2018-09-18 15:54:28.799 INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: WebApplicationContext for namespace 'springMVC-servlet': startup date [Tue Sep 18 15:54:28 CST 2018]; parent: Root WebApplicationContext
+2018-09-18 15:54:28.879 INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'springMVC': initialization completed in 508 ms
+2018-09-18 15:56:55.252 INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization started
+2018-09-18 15:56:55.289 INFO  org.springframework.web.context.support.XmlWebApplicationContext - Refreshing Root WebApplicationContext: startup date [Tue Sep 18 15:56:55 CST 2018]; root of context hierarchy
+2018-09-18 15:56:55.317 INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [applicationContext.xml]
+2018-09-18 15:56:55.585 INFO  org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2018-09-18 15:56:56.311 INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2018-09-18 15:56:56.835 INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1581 ms
+2018-09-18 15:56:56.865 INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'springMVC': initialization started
+2018-09-18 15:56:56.867 INFO  org.springframework.web.context.support.XmlWebApplicationContext - Refreshing WebApplicationContext for namespace 'springMVC-servlet': startup date [Tue Sep 18 15:56:56 CST 2018]; parent: Root WebApplicationContext
+2018-09-18 15:56:56.868 INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [springmvc.xml]
+2018-09-18 15:56:56.994 INFO  org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2018-09-18 15:56:57.112 INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/test1]}" onto public java.lang.String cn.ncufz.webprotal.controller.FirstDemo.testSpring()
+2018-09-18 15:56:57.113 INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/test2]}" onto public java.lang.String cn.ncufz.webprotal.controller.FirstDemo.findUserById(org.springframework.ui.Model)
+2018-09-18 15:56:57.301 INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: WebApplicationContext for namespace 'springMVC-servlet': startup date [Tue Sep 18 15:56:56 CST 2018]; parent: Root WebApplicationContext
+2018-09-18 15:56:57.350 INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: WebApplicationContext for namespace 'springMVC-servlet': startup date [Tue Sep 18 15:56:56 CST 2018]; parent: Root WebApplicationContext
+2018-09-18 15:56:57.433 INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'springMVC': initialization completed in 568 ms

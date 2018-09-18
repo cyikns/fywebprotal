@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:context="http://www.springframework.org/schema/context" xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd
+	http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.0.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.0.xsd
+	http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.0.xsd">
+
+    <!--扫描注解，但是排除Controller-->
+    <context:component-scan base-package="cn.ncufz.webprotal">
+        <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
+    </context:component-scan>
+
+    <!--加载数据库连接信息配置文件-->
+    <context:property-placeholder location="classpath:durid.properties"/>
+
+    <!-- 数据库连接池 -->
+    <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource" init-method="init" destroy-method="close">
+        <!-- 基本属性 url、user、password -->
+        <property name="url" value="${druid.url}"/>
+        <property name="username" value="${druid.username}"/>
+        <property name="password" value="${druid.password}"/>
+        <property name="driverClassName" value="${druid.driver}"/>
+        <!-- 配置初始化大小、最小、最大 -->
+        <property name="initialSize" value="${druid.initialSize}"/>
+        <property name="minIdle" value="${druid.minIdle}"/>
+        <property name="maxActive" value="${druid.maxActive}"/>
+        <!-- 配置获取连接等待超时的时间 -->
+        <property name="maxWait" value="${druid.maxWait}"/>
+        <!-- 配置间隔多久才进行一次检测，检测需要关闭的空闲连接，单位是毫秒 -->
+        <property name="timeBetweenEvictionRunsMillis" value="${druid.timeBetweenEvictionRunsMillis}"/>
+        <!-- 配置一个连接在池中最小生存的时间，单位是毫秒 -->
+        <property name="minEvictableIdleTimeMillis" value="${druid.minEvictableIdleTimeMillis}"/>
+        <!--<property name="validationQuery" value="${druid.validationQuery}"/>-->
+        <property name="testWhileIdle" value="${druid.testWhileIdle}"/>
+        <property name="testOnBorrow" value="${druid.testOnBorrow}"/>
+        <property name="testOnReturn" value="${druid.testOnReturn}"/>
+        <!-- 打开PSCache，并且指定每个连接上PSCache的大小  如果用Oracle，则把poolPreparedStatements配置为true，mysql可以配置为false。-->
+        <property name="poolPreparedStatements" value="${druid.poolPreparedStatements}"/>
+        <property name="maxPoolPreparedStatementPerConnectionSize"
+                  value="${druid.maxPoolPreparedStatementPerConnectionSize}"/>
+        <!-- 配置监控统计拦截的filters -->
+        <property name="filters" value="${druid.filters}"/>
+    </bean>
+
+    <!-- 让spring管理sqlsessionfactory 使用mybatis和spring整合包中的 -->
+    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <!--载入mybatis配置文件-->
+        <property name="configLocation" value="classpath:sqlMapConfig.xml"/>
+        <!--引入数据库连接池-->
+        <property name="dataSource" ref="dataSource"/>
+        <!--自动扫描cn/ncufz/webprotal/dao目录下的所有SQL映射的xml文件, 省掉Configuration.xml里的手工配置
+           value="classpath:cn/ncufz/webprotal/dao/*.xml"指的是classpath(类路径)下cn.ncufz.webprotal.dao包中的所有xml文件
+           *Mapper.xml位于cn.ncufz.webprotal.dao包下，这样*Mapper.xml就可以被自动扫描-->
+        <property name="mapperLocations">
+            <list>
+                <value>classpath:cn/ncufz/webprotal/dao/*Mapper.xml"</value>
+            </list>
+        </property>
+    </bean>
+    <!-- 配置扫描器 -->
+    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <!-- 扫描cn.ncufz.webprotal.dao这个包以及它的子包下的所有映射接口类 -->
+        <property name="basePackage" value="cn.ncufz.webprotal.dao"/>
+        <!--<property name="sqlSessionFactoryName" ref="sqlSessionFactory"/>-->
+    </bean>
+    <!-- ========================================分隔线========================================= -->
+
+    <!-- 配置Spring的事务管理器 -->
+    <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
+
+    <!-- 拦截器方式配置事物 -->
+    <tx:advice id="transactionAdvice" transaction-manager="transactionManager">
+        <tx:attributes>
+            <tx:method name="add*" propagation="REQUIRED"/>
+            <tx:method name="append*" propagation="REQUIRED"/>
+            <tx:method name="insert*" propagation="REQUIRED"/>
+            <tx:method name="save*" propagation="REQUIRED"/>
+            <tx:method name="update*" propagation="REQUIRED"/>
+            <tx:method name="modify*" propagation="REQUIRED"/>
+            <tx:method name="edit*" propagation="REQUIRED"/>
+            <tx:method name="delete*" propagation="REQUIRED"/>
+            <tx:method name="remove*" propagation="REQUIRED"/>
+            <tx:method name="repair" propagation="REQUIRED"/>
+            <tx:method name="delAndRepair" propagation="REQUIRED"/>
+
+            <tx:method name="get*" propagation="SUPPORTS"/>
+            <tx:method name="find*" propagation="SUPPORTS"/>
+            <tx:method name="load*" propagation="SUPPORTS"/>
+            <tx:method name="search*" propagation="SUPPORTS"/>
+            <tx:method name="datagrid*" propagation="SUPPORTS"/>
+
+            <tx:method name="*" propagation="SUPPORTS"/>
+        </tx:attributes>
+    </tx:advice>
+    <aop:config>
+        <aop:pointcut id="transactionPointcut" expression="execution(* cn.ncufz.webprotal.service.**.*Impl.*(..))"/>
+        <aop:advisor advice-ref="transactionAdvice" pointcut-ref="transactionPointcut"/>
+    </aop:config>
+
+
+    <!-- 配置druid监控spring jdbc -->
+    <bean id="druid-stat-interceptor" class="com.alibaba.druid.support.spring.stat.DruidStatInterceptor">
+    </bean>
+    <bean id="druid-stat-pointcut" class="org.springframework.aop.support.JdkRegexpMethodPointcut" scope="prototype">
+        <property name="patterns">
+            <list>
+                <value>cn.ncufz.webprotal.service.*</value>
+            </list>
+        </property>
+    </bean>
+    <aop:config>
+        <aop:advisor advice-ref="druid-stat-interceptor" pointcut-ref="druid-stat-pointcut"/>
+    </aop:config>
+</beans>
